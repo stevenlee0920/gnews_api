@@ -57,7 +57,6 @@ router.get('/news/search/:search', checkCache, async (req, res) => {
 // Search news by title
 router.get('/news/title/:title', checkCache, async (req, res) => {
     try {
-        console.log("req: ", req.query);
         const { data } = await axios.get(`${GNEWS_API_URL}/search`, {
             params: {
                 token: GNEWS_API_KEY,
